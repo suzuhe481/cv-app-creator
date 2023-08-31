@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import "./App.css";
+import Title from "./components/Title/Title";
 import Form from "./components/Form/Form";
 import Preview from "./components/Preview/Preview";
 
@@ -36,8 +37,11 @@ function App() {
 
   return (
     <>
-      <Form onFormChange={handleFormChange} />
-      <Preview formData={formData} />
+      <Title />
+      <div className="form-preview-container">
+        <Form onFormChange={handleFormChange} />
+        <Preview formData={formData} />
+      </div>
     </>
   );
 }
