@@ -7,6 +7,8 @@ function Preview({ formData }) {
   const phone = formData.phone;
   const location = formData.location;
 
+  const summary = formData.summary;
+
   return (
     <div className="preview">
       <div className="personal-info">
@@ -19,6 +21,9 @@ function Preview({ formData }) {
         </span>
         <br />
         <span className="location-info">{location}</span>
+      </div>
+      <div className="summary">
+        <p>{summary}</p>
       </div>
     </div>
   );
