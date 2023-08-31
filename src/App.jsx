@@ -19,6 +19,12 @@ function App() {
     startDate: "",
     endDate: "",
     responsibilities: "",
+
+    school: "",
+    degree: "",
+    majorMinor: "",
+    degreeStartDate: "",
+    degreeEndDate: "",
   });
 
   function handleFormChange({ type, data }) {
