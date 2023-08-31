@@ -4,8 +4,8 @@
   text-align: center;
 }
 
-/* Displays the elements inside #root side by side. */
-#root {
+/* Displays the form and preview side by side. */
+#root .form-preview-container {
   display: flex;
   flex-direction: row;
 }
