@@ -18,3 +18,8 @@
 .preview .location-info {
   font-size: 24px;
 }
+
+/* Stylizes the summary */
+.preview .summary p {
+  font-style: italic;
+}
