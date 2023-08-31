@@ -4,7 +4,8 @@
 
 /* Form displayed in grid */
 #cv-form > fieldset.personal,
-#cv-form > fieldset.experience {
+#cv-form > fieldset.experience,
+#cv-form > fieldset.education {
   display: grid;
   grid-template-columns: auto 1fr;
 }
