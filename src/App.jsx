@@ -11,6 +11,7 @@ function App() {
     email: "",
     phone: "",
     location: "",
+    summary: "",
   });
 
   function handleFormChange({ type, data }) {
