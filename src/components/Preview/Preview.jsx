@@ -1,8 +1,19 @@
-function Preview({ fName, lName }) {
+import "./Preview.css";
+
+function Preview({ firstName, lastName, email, phone, location }) {
   return (
     <div className="preview">
-      <h1>{fName}</h1>
-      <h1>{lName}</h1>
+      <div className="personal-info">
+        <span className="full-name">
+          {firstName} {lastName}
+        </span>
+        <br />
+        <span className="contact-info">
+          {email} {phone}
+        </span>
+        <br />
+        <span className="location-info">{location}</span>
+      </div>
     </div>
   );
 }
