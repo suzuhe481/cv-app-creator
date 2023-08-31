@@ -1,5 +1,7 @@
 #cv-form {
   width: 40vw;
+
+  margin: 0 10px;
 }
 
 /* Form displayed in grid */
@@ -8,6 +10,11 @@
 #cv-form > fieldset.education {
   display: grid;
   grid-template-columns: auto 1fr;
+}
+
+/* Padding in each fieldset */
+#cv-form > fieldset {
+  padding: 20px;
 }
 
 /* Spacing between form's input and label */
