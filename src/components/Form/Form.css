@@ -1,0 +1,14 @@
+#cv-form {
+  width: 50vw;
+}
+
+/* Form displayed in grid */
+#cv-form > fieldset {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+/* Spacing between form's input and label */
+#cv-form > fieldset input {
+  margin-left: 10px;
+}
