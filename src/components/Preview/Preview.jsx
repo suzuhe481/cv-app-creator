@@ -15,6 +15,12 @@ function Preview({ formData }) {
   const endDate = formData.endDate;
   const responsibilities = formData.responsibilities;
 
+  const school = formData.school;
+  const degree = formData.degree;
+  const majorMinor = formData.majorMinor;
+  const degreeStartDate = formData.degreeStartDate;
+  const degreeEndDate = formData.degreeEndDate;
+
   return (
     <div className="preview">
       <div className="personal-info">
@@ -32,7 +38,7 @@ function Preview({ formData }) {
         <p>{summary}</p>
       </div>
       <div className="experience">
-        <p>Experience</p>
+        <p className="section-title">Experience</p>
         <ul>
           <li className="title">{jobTitle}</li>
           <li className="company">Company: {company}</li>
@@ -40,6 +46,18 @@ function Preview({ formData }) {
             Dates Worked: {startDate} to {endDate}
           </li>
           <li className="responsibilities">{responsibilities}</li>
+        </ul>
+      </div>
+      <div className="education">
+        <p className="section-title">Education</p>
+        <ul>
+          <li className="school">{school}</li>
+          <li className="degree">
+            {degree} {majorMinor}
+          </li>
+          <li className="dates">
+            Dates: {degreeStartDate} - {degreeEndDate}
+          </li>
         </ul>
       </div>
     </div>
