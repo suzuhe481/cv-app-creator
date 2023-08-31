@@ -1,4 +1,12 @@
-function Form({ onFirstNameChange, onLastNameChange }) {
+import "./Form.css";
+
+function Form({
+  onFirstNameChange,
+  onLastNameChange,
+  onEmailChange,
+  onPhoneChange,
+  onLocationChange,
+}) {
   return (
     <form id="cv-form">
       <fieldset>
@@ -17,6 +25,20 @@ function Form({ onFirstNameChange, onLastNameChange }) {
           type="text"
           name="last-name"
           onChange={onLastNameChange}
+        />
+
+        <label htmlFor="email">Email</label>
+        <input id="email" type="email" name="email" onChange={onEmailChange} />
+
+        <label htmlFor="phone">Phone</label>
+        <input id="phone" type="tel" name="phone" onChange={onPhoneChange} />
+
+        <label htmlFor="location">Location</label>
+        <input
+          id="location"
+          type="text"
+          name="location"
+          onChange={onLocationChange}
         />
       </fieldset>
     </form>
