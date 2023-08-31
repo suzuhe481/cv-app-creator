@@ -23,3 +23,17 @@
 .preview .summary p {
   font-style: italic;
 }
+
+/* Styles job title */
+.preview .experience li.title {
+  list-style-type: none;
+  text-align: left;
+  font-weight: bold;
+}
+
+.preview .experience li:not(:first-child) {
+  list-style: none;
+  position: relative;
+  text-align: left;
+  left: 20px;
+}
