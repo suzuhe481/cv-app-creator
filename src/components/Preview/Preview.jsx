@@ -1,6 +1,12 @@
 import "./Preview.css";
 
-function Preview({ firstName, lastName, email, phone, location }) {
+function Preview({ formData }) {
+  const firstName = formData.firstName;
+  const lastName = formData.lastName;
+  const email = formData.email;
+  const phone = formData.phone;
+  const location = formData.location;
+
   return (
     <div className="preview">
       <div className="personal-info">
