@@ -11,7 +11,14 @@ function App() {
     email: "",
     phone: "",
     location: "",
+
     summary: "",
+
+    jobTitle: "",
+    company: "",
+    startDate: "",
+    endDate: "",
+    responsibilities: "",
   });
 
   function handleFormChange({ type, data }) {
