@@ -21,6 +21,54 @@ function Preview({ formData }) {
   const degreeStartDate = formData.degreeStartDate;
   const degreeEndDate = formData.degreeEndDate;
 
+  // Formats the date element.
+  var dateElement;
+  if (startDate === "" && endDate === "") {
+    dateElement = <></>;
+  } else if (startDate === "" || endDate === "") {
+    dateElement = (
+      <>
+        {startDate} {endDate}
+      </>
+    );
+  } else {
+    dateElement = (
+      <>
+        Dates Worked: {startDate} to {endDate}
+      </>
+    );
+  }
+
+  // Formats the degree date element.
+  var degreeDateElement;
+  if (degreeStartDate === "" && degreeEndDate === "") {
+    degreeDateElement = <></>;
+  } else if (degreeStartDate === "" || degreeEndDate === "") {
+    degreeDateElement = (
+      <>
+        {degreeStartDate} {degreeEndDate}
+      </>
+    );
+  } else {
+    degreeDateElement = (
+      <>
+        Dates: {degreeStartDate} - {degreeEndDate}
+      </>
+    );
+  }
+
+  // Determines whether the Experience title should be displayed.
+  var experienceFlag = false;
+  if (jobTitle || company || startDate || endDate || responsibilities) {
+    experienceFlag = true;
+  }
+
+  // Determines whether the Education title should be displayed.
+  var educationFlag = false;
+  if (school || degree || majorMinor || degreeStartDate || degreeEndDate) {
+    educationFlag = true;
+  }
+
   return (
     <div className="preview">
       <div className="personal-info">
@@ -38,26 +86,24 @@ function Preview({ formData }) {
         <p>{summary}</p>
       </div>
       <div className="experience">
-        <p className="section-title">Experience</p>
+        <p className="section-title">{experienceFlag && "Experience"}</p>
         <ul>
           <li className="title">{jobTitle}</li>
-          <li className="company">Company: {company}</li>
-          <li className="dates">
-            Dates Worked: {startDate} to {endDate}
+          <li className="company">
+            {company && "Company:"} {company}
           </li>
+          <li className="dates">{dateElement}</li>
           <li className="responsibilities">{responsibilities}</li>
         </ul>
       </div>
       <div className="education">
-        <p className="section-title">Education</p>
+        <p className="section-title">{educationFlag && "Education"}</p>
         <ul>
           <li className="school">{school}</li>
           <li className="degree">
             {degree} {majorMinor}
           </li>
-          <li className="dates">
-            Dates: {degreeStartDate} - {degreeEndDate}
-          </li>
+          <li className="dates">{degreeDateElement}</li>
         </ul>
       </div>
     </div>
