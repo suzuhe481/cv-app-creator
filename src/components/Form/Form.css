@@ -3,7 +3,8 @@
 }
 
 /* Form displayed in grid */
-#cv-form > fieldset.personal {
+#cv-form > fieldset.personal,
+#cv-form > fieldset.experience {
   display: grid;
   grid-template-columns: auto 1fr;
 }
