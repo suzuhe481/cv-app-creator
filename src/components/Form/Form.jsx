@@ -95,6 +95,45 @@ function Form({ onFormChange }) {
           rows="4"
         />
       </fieldset>
+
+      <fieldset className="education">
+        <legend>Education</legend>
+        <label htmlFor="school">School</label>
+        <input
+          id="school"
+          type="text"
+          name="school"
+          onChange={(data) => onFormChange({ type: "school", data })}
+        />
+        <label htmlFor="degree">Degree</label>
+        <input
+          id="degree"
+          type="text"
+          name="degree"
+          onChange={(data) => onFormChange({ type: "degree", data })}
+        />
+        <label htmlFor="majorMinor">Major/Minor</label>
+        <input
+          id="majorMinor"
+          type="text"
+          name="majorMinor"
+          onChange={(data) => onFormChange({ type: "majorMinor", data })}
+        />
+        <label htmlFor="degreeStartDate">Start Date</label>
+        <input
+          id="degreeStartDate"
+          type="date"
+          name="degreeStartDate"
+          onChange={(data) => onFormChange({ type: "degreeStartDate", data })}
+        />
+        <label htmlFor="degreeEndDate">End Date</label>
+        <input
+          id="degreeEndDate"
+          type="date"
+          name="degreeEndDate"
+          onChange={(data) => onFormChange({ type: "degreeEndDate", data })}
+        />
+      </fieldset>
     </form>
   );
 }
