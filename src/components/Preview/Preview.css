@@ -24,16 +24,27 @@
   font-style: italic;
 }
 
-/* Styles job title */
-.preview .experience li.title {
+/* Styles first bullet point in experience and education sections */
+.preview .experience li.title,
+.preview .education li.school {
   list-style-type: none;
   text-align: left;
   font-weight: bold;
 }
 
-.preview .experience li:not(:first-child) {
-  list-style: none;
+/* Affects li in experience and education sectinos, except the first li in each. */
+.preview .experience li:not(:first-child),
+.preview .education li:not(:first-child) {
   position: relative;
+  list-style: none;
   text-align: left;
+
   left: 20px;
+  font-size: 18px;
+}
+
+/* Styles the title of each section */
+.preview .section-title {
+  font-size: 24px;
+  font-weight: bold;
 }
