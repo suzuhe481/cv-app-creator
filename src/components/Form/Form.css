@@ -3,7 +3,7 @@
 }
 
 /* Form displayed in grid */
-#cv-form > fieldset {
+#cv-form > fieldset.personal {
   display: grid;
   grid-template-columns: auto 1fr;
 }
@@ -11,4 +11,9 @@
 /* Spacing between form's input and label */
 #cv-form > fieldset input {
   margin-left: 10px;
+}
+
+/* Stylizes textarea */
+#cv-form > fieldset.summary textarea {
+  width: 90%;
 }
