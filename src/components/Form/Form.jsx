@@ -3,7 +3,7 @@ import "./Form.css";
 function Form({ onFormChange }) {
   return (
     <form id="cv-form">
-      <fieldset>
+      <fieldset className="personal">
         <legend>Personal Information</legend>
         <label htmlFor="first-name">First Name</label>
         <input
@@ -43,6 +43,15 @@ function Form({ onFormChange }) {
           type="text"
           name="location"
           onChange={(data) => onFormChange({ type: "location", data })}
+        />
+      </fieldset>
+      <fieldset className="summary">
+        <legend>Summary</legend>
+        <textarea
+          id="summary"
+          name="summary"
+          onChange={(data) => onFormChange({ type: "summary", data })}
+          rows="4"
         />
       </fieldset>
     </form>
