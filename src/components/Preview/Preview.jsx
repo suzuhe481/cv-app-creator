@@ -9,6 +9,12 @@ function Preview({ formData }) {
 
   const summary = formData.summary;
 
+  const jobTitle = formData.jobTitle;
+  const company = formData.company;
+  const startDate = formData.startDate;
+  const endDate = formData.endDate;
+  const responsibilities = formData.responsibilities;
+
   return (
     <div className="preview">
       <div className="personal-info">
@@ -24,6 +30,17 @@ function Preview({ formData }) {
       </div>
       <div className="summary">
         <p>{summary}</p>
+      </div>
+      <div className="experience">
+        <p>Experience</p>
+        <ul>
+          <li className="title">{jobTitle}</li>
+          <li className="company">Company: {company}</li>
+          <li className="dates">
+            Dates Worked: {startDate} to {endDate}
+          </li>
+          <li className="responsibilities">{responsibilities}</li>
+        </ul>
       </div>
     </div>
   );
