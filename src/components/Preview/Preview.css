@@ -1,0 +1,20 @@
+.preview {
+  border: 1px solid black;
+
+  margin: 5px;
+
+  width: 40vw;
+  height: 100vh;
+}
+
+/* Styling for full name */
+.preview .full-name {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Styling for contact info and location */
+.preview .contact-info,
+.preview .location-info {
+  font-size: 24px;
+}
