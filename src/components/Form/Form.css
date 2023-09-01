@@ -17,12 +17,29 @@
   padding: 20px;
 }
 
-/* Spacing between form's input and label */
-#cv-form > fieldset input {
+/* Spacing between form's input/textarea and label */
+#cv-form > fieldset input,
+#cv-form > fieldset textarea {
   margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* Stylizes textarea */
 #cv-form > fieldset.summary textarea {
   width: 90%;
+}
+
+/* Allows only vertical resizing of textarea. */
+#cv-form > fieldset textarea {
+  resize: vertical;
+}
+
+/*
+Vertically centers all the labels in each fieldset except the summary fieldset.
+That label is centered horizontally.
+*/
+#cv-form > fieldset:not(fieldset.summary) label {
+  display: flex;
+  align-items: center;
 }
