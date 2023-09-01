@@ -1,8 +1,12 @@
+import Button from "../Button/Button";
+
 import "./Form.css";
 
 function Form({ onFormChange }) {
   return (
     <form id="cv-form">
+      <Button text="Save as PDF" />
+
       <fieldset className="personal">
         <legend>Personal Information</legend>
         <label htmlFor="first-name">First Name</label>
