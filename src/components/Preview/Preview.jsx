@@ -70,41 +70,43 @@ function Preview({ formData }) {
   }
 
   return (
-    <div className="preview">
-      <div className="personal-info">
-        <span className="full-name">
-          {firstName} {lastName}
-        </span>
-        <br />
-        <span className="contact-info">
-          {email} {phone}
-        </span>
-        <br />
-        <span className="location-info">{location}</span>
-      </div>
-      <div className="summary">
-        <p>{summary}</p>
-      </div>
-      <div className="experience">
-        <p className="section-title">{experienceFlag && "Experience"}</p>
-        <ul>
-          <li className="title">{jobTitle}</li>
-          <li className="company">
-            {company && "Company:"} {company}
-          </li>
-          <li className="dates">{dateElement}</li>
-          <li className="responsibilities">{responsibilities}</li>
-        </ul>
-      </div>
-      <div className="education">
-        <p className="section-title">{educationFlag && "Education"}</p>
-        <ul>
-          <li className="school">{school}</li>
-          <li className="degree">
-            {degree} {majorMinor}
-          </li>
-          <li className="dates">{degreeDateElement}</li>
-        </ul>
+    <div className="preview-container">
+      <div id="preview" className="preview">
+        <div className="personal-info">
+          <span className="full-name">
+            {firstName} {lastName}
+          </span>
+          <br />
+          <span className="contact-info">
+            {email} {phone}
+          </span>
+          <br />
+          <span className="location-info">{location}</span>
+        </div>
+        <div className="summary">
+          <p>{summary}</p>
+        </div>
+        <div className="experience">
+          <p className="section-title">{experienceFlag && "Experience"}</p>
+          <ul>
+            <li className="title">{jobTitle}</li>
+            <li className="company">
+              {company && "Company:"} {company}
+            </li>
+            <li className="dates">{dateElement}</li>
+            <li className="responsibilities">{responsibilities}</li>
+          </ul>
+        </div>
+        <div className="education">
+          <p className="section-title">{educationFlag && "Education"}</p>
+          <ul>
+            <li className="school">{school}</li>
+            <li className="degree">
+              {degree} {majorMinor}
+            </li>
+            <li className="dates">{degreeDateElement}</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
