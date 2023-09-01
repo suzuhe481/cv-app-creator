@@ -48,7 +48,7 @@ function Form({ onFormChange }) {
 
       <fieldset className="summary">
         <legend>Summary</legend>
-        <label htmlFor="Summary"></label>
+        <label htmlFor="Summary">Give yourself a short summary</label>
         <textarea
           id="summary"
           name="summary"
