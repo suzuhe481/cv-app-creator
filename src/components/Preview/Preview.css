@@ -1,4 +1,4 @@
-.preview {
+.preview-container {
   border: 1px solid black;
 
   margin: 0 10px;
@@ -19,7 +19,10 @@
 }
 
 /* Stylizes the summary */
-.preview .summary p {
+.preview .summary {
+  width: 90%;
+  margin: auto;
+
   font-style: italic;
 }
 
@@ -40,6 +43,11 @@
 
   left: 20px;
   font-size: 18px;
+}
+
+/* Stylizes the experience responsibitlies */
+.preview .experience .responsibilities {
+  width: 90%;
 }
 
 /* Styles the title of each section */
